@@ -223,6 +223,7 @@ class USB2Driver(Driver):
         self._epOut = self._epIn = None
     
     def _read(self, count):
+        print('--------count', count)
         return self._epIn.read(count).tostring()
     
     def _write(self, data):
